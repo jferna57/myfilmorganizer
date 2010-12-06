@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package
+        name="net.juancarlosfernandez.apps.myFilmsOrganizer.test.utils"
+        x="110" y="131"/>
+    <Package name="net.juancarlosfernandez.apps.myFilmsOrganizer.utils"
+        x="105" y="62"/>
+</PackageAnalysis>

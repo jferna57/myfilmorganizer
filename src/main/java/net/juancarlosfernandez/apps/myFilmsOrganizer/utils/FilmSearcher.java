@@ -35,6 +35,11 @@ public class FilmSearcher {
 		return files;
 	}
 
+	/**
+	 * @param path
+	 * @param fileName
+	 * @return
+	 */
 	public boolean normalizeFilmName(String path, String fileName) {
 
 		File film = new File(path + fileName);
@@ -44,17 +49,19 @@ public class FilmSearcher {
 
 			// TODO: Review this
 			// fileNameNormalize =
-			fileNameNormalize = fileNameNormalize.replaceAll("dvdrip","");
-
+			/* fileNameNormalize = fileNameNormalize
+					.replaceAll("amelina|divx|dvdrip|spanish|ac3|www|lokotorrents|com|xvid|2009|mp3|5.1|2010|audiolatino|portorrent",
+							"");*/
+			
 			// Create the new file
 			File filmNormalize = new File(path + fileNameNormalize);
 			film.renameTo(filmNormalize);
 			return true;
-			
+
 		} else {
 			return false;
 		}
-		
+
 	}
 
 	public boolean normalizeFilmName(String path, String[] fileNames) {
