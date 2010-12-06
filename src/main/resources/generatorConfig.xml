@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location="/home/juancarlosf/.m2/repository/org/apache/derby/derby/10.6.2.1/derby-10.6.2.1.jar" />
+
+	<context id="DerbyTables" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="org.apache.derby.jdbc.EmbeddedDriver"
+			connectionURL="jdbc:derby:./src/main/resources/DerbyDB/pelisDB"
+			userId="" password="">
+		</jdbcConnection>
+
+		<javaModelGenerator
+			targetPackage="net.juancarlosfernandez.apps.myFilmsOrganizer.domain"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator
+			targetPackage="net.juancarlosfernandez.apps.myFilmsOrganizer.persistence.xml"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="net.juancarlosfernandez.apps.myFilmsOrganizer.persistence"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table tableName="*" schema="APP">
+		</table>
+
+	</context>
+</generatorConfiguration>

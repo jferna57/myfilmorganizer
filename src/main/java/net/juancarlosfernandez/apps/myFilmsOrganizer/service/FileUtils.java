@@ -1,4 +1,4 @@
-package net.juancarlosfernandez.apps.myFilmsOrganizer.utils;
+package net.juancarlosfernandez.apps.myFilmsOrganizer.service;
 
 import java.io.File;
 import java.io.IOException;

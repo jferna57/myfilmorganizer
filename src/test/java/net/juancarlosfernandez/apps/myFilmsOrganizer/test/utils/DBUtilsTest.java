@@ -6,7 +6,7 @@ import static org.junit.Assert.assertFalse;
 
 import java.sql.SQLException;
 
-import net.juancarlosfernandez.apps.myFilmsOrganizer.utils.DBUtils;
+import net.juancarlosfernandez.apps.myFilmsOrganizer.service.DBUtils;
 
 import org.junit.After;
 import org.junit.Before;
