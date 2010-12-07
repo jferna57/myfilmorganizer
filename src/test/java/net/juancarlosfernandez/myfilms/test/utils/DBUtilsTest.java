@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import net.juancarlosfernandez.myfilms.service.DBUtils;
+import net.juancarlosfernandez.myfilms.utils.DBUtils;
 
 import org.junit.After;
 import org.junit.Before;

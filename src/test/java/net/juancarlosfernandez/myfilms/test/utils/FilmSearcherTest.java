@@ -4,8 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
-import net.juancarlosfernandez.myfilms.service.FileUtils;
-import net.juancarlosfernandez.myfilms.service.FilmSearcher;
+import net.juancarlosfernandez.myfilms.utils.FileUtils;
+import net.juancarlosfernandez.myfilms.utils.FilmSearcher;
 
 import org.junit.After;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package net.juancarlosfernandez.myfilms.service;
+package net.juancarlosfernandez.myfilms.utils;
 
 import java.io.File;
 import java.io.IOException;
