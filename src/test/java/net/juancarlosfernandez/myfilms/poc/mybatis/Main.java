@@ -5,7 +5,7 @@ import java.io.Reader;
 import java.sql.SQLException;
 
 import net.juancarlosfernandez.myfilms.domain.Film;
-import net.juancarlosfernandez.myfilms.poc.persistence.FilmMapper;
+import net.juancarlosfernandez.myfilms.mapper.FilmMapper;
 import net.juancarlosfernandez.myfilms.utils.DBUtils;
 
 import org.apache.ibatis.io.Resources;

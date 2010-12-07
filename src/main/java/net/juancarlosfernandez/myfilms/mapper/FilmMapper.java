@@ -1,4 +1,4 @@
-package net.juancarlosfernandez.myfilms.poc.persistence;
+package net.juancarlosfernandez.myfilms.mapper;
 
 import java.util.List;
 import net.juancarlosfernandez.myfilms.domain.Film;
