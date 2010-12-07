@@ -1,4 +1,4 @@
-package net.juancarlosfernandez.apps.myFilmsOrganizer.service;
+package net.juancarlosfernandez.myfilms.service;
 
 import java.io.File;
 

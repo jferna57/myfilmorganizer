@@ -14,26 +14,25 @@
 		</jdbcConnection>
 
 		<javaModelGenerator
-			targetPackage="net.juancarlosfernandez.apps.myFilmsOrganizer.domain"
+			targetPackage="net.juancarlosfernandez.myfilms.domain"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<sqlMapGenerator
-			targetPackage="net.juancarlosfernandez.apps.myFilmsOrganizer.persistence.xml"
+			targetPackage="net.juancarlosfernandez.myfilms.persistence.xml"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="net.juancarlosfernandez.apps.myFilmsOrganizer.persistence"
+			targetPackage="net.juancarlosfernandez.myfilms.poc.persistence"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="*" schema="APP">
-		</table>
+		<table tableName="Film" />
 
 	</context>
 </generatorConfiguration>

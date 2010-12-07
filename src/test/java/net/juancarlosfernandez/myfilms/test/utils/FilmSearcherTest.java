@@ -1,11 +1,11 @@
-package net.juancarlosfernandez.apps.myFilmsOrganizer.test.utils;
+package net.juancarlosfernandez.myfilms.test.utils;
 
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
-import net.juancarlosfernandez.apps.myFilmsOrganizer.service.FileUtils;
-import net.juancarlosfernandez.apps.myFilmsOrganizer.service.FilmSearcher;
+import net.juancarlosfernandez.myfilms.service.FileUtils;
+import net.juancarlosfernandez.myfilms.service.FilmSearcher;
 
 import org.junit.After;
 import org.junit.Before;
