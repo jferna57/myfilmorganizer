@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBUtils {
 	
 	private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-	private static final String DB_NAME= "./src/main/resources/DerbyDB/pelisDB";
+	private static final String DB_NAME= "./target/DerbyDB/pelisDB";
 	private static final String DB_URL = "jdbc:derby:" + DB_NAME + ";create=true";
 	
 	public static Connection getConnection() throws SQLException {
