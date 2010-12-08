@@ -17,7 +17,7 @@ public class Main {
 
 	public static void main(String args[]) {
 
-		String resource = "net/juancarlosfernandez/myfilms/xml/configuration.xml";
+		String resource = "net/juancarlosfernandez/myfilms/xml/ibatis-config.xml";
 		Reader reader;
 		try {
 			reader = Resources.getResourceAsReader(resource);
@@ -40,7 +40,6 @@ public class Main {
 			}
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("error");
 		}
