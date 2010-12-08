@@ -17,7 +17,7 @@ public class Main {
 
 	public static void main(String args[]) {
 
-		String resource = "net/juancarlosfernandez/myfilms/xml/ibatis-config.xml";
+		String resource = "ibatis-config.xml";
 		Reader reader;
 		try {
 			reader = Resources.getResourceAsReader(resource);
