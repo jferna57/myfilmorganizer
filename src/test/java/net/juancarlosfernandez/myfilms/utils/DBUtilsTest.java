@@ -1,4 +1,4 @@
-package net.juancarlosfernandez.myfilms.test.utils;
+package net.juancarlosfernandez.myfilms.utils;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -6,8 +6,6 @@ import static org.junit.Assert.assertTrue;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import net.juancarlosfernandez.myfilms.utils.DBUtils;
 
 import org.junit.After;
 import org.junit.Before;

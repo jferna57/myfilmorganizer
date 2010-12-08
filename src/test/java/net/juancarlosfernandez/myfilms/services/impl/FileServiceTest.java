@@ -1,17 +1,16 @@
-package net.juancarlosfernandez.myfilms.test.utils;
+package net.juancarlosfernandez.myfilms.services.impl;
 
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
 import net.juancarlosfernandez.myfilms.utils.FileUtils;
-import net.juancarlosfernandez.myfilms.utils.FilmSearcher;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FilmSearcherTest {
+public class FileServiceTest  {
 
 	// Films tmp directory
 	private String FILMS_TMP = "./target/tmp/";
@@ -97,7 +96,7 @@ public class FilmSearcherTest {
 
 	@Test
 	public void testGetFilms() {
-		FilmSearcher filmSearch = new FilmSearcher();
+		FileService filmSearch = new FileService();
 		String[] films = filmSearch.getFilms(FILMS_TMP);
 
 		assertTrue(films.length == NUM_AVI_FILMS_TMP + NUM_MPEG_FILMS_TMP + SAMPLE_FILE_NAMES.length);
@@ -109,7 +108,7 @@ public class FilmSearcherTest {
 
 	@Test
 	public void testNormalizeFilmName() {
-		FilmSearcher filmSearch = new FilmSearcher();
+		FileService filmSearch = new FileService();
 		String[] films = filmSearch.getFilms(FILMS_TMP);
 
 		for (int i = 0; i < films.length; i++) {

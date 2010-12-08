@@ -1,4 +1,4 @@
-package net.juancarlosfernandez.myfilms.utils;
+package net.juancarlosfernandez.myfilms.services.impl;
 
 import java.io.File;
 
@@ -8,7 +8,7 @@ import org.apache.commons.io.filefilter.NotFileFilter;
 import org.apache.commons.io.filefilter.OrFileFilter;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
 
-public class FilmSearcher {
+public class FileService {
 
 	/**
 	 * Get all the files (films) in a path directory. Films are files with .avi
