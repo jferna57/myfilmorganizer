@@ -1,11 +1,9 @@
 package net.juancarlosfernandez.myfilms.test.utils;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
-
+import static org.junit.Assert.assertTrue;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 

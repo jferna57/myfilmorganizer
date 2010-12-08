@@ -1,14 +1,12 @@
 package net.juancarlosfernandez.myfilms.services.impl;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import net.juancarlosfernandez.myfilms.domain.Film;
 import net.juancarlosfernandez.myfilms.services.IFilmService;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
