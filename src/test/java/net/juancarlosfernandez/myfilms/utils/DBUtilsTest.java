@@ -13,6 +13,9 @@ import org.junit.Test;
 
 public class DBUtilsTest {
 
+	private final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+	private final String DB_URL = "jdbc:derby:./target/DerbyDB/samplePelisDB;create=true";
+
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -22,29 +25,27 @@ public class DBUtilsTest {
 	}
 
 	@Test
-	public void createConnection(){
-		
+	public void createConnection() {
+
 		try {
-				
-			Connection conn = DBUtils.getConnection();
-			
+
+			Connection conn = DBUtils.getConnection(DB_DRIVER, DB_URL);
+
 			Statement st = conn.createStatement();
 
 			st.execute("CREATE TABLE USERS ( "
-							+ "FIRST_NAME VARCHAR(30) NOT NULL,"
-							+ "LAST_NAME VARCHAR(30) NOT NULL,"
-							+ "EMP_NO INTEGER NOT NULL CONSTRAINT EMP_NO_PK PRIMARY KEY)");
+					+ "FIRST_NAME VARCHAR(30) NOT NULL,"
+					+ "LAST_NAME VARCHAR(30) NOT NULL,"
+					+ "EMP_NO INTEGER NOT NULL CONSTRAINT EMP_NO_PK PRIMARY KEY)");
 
 			st.execute("DROP TABLE USERS");
-			
+
 			conn.close();
-			
+
 			assertTrue(true);
-			
+
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			assertFalse(e.getMessage(),false);
+			assertFalse(e.getMessage(), false);
 		}
-		
 	}
 }

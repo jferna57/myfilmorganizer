@@ -3,9 +3,15 @@ package net.juancarlosfernandez.myfilms.services.impl;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.io.Reader;
+import java.sql.Connection;
+
 import net.juancarlosfernandez.myfilms.domain.Film;
 import net.juancarlosfernandez.myfilms.services.IFilmService;
+import net.juancarlosfernandez.myfilms.utils.DBUtils;
 
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.jdbc.ScriptRunner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -15,32 +21,30 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class FilmServiceTest {
 
+	private final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+	private final String DB_URL = "jdbc:derby:./target/DerbyDB/samplePelisDB;create=true";
+
 	ApplicationContext ctx = new ClassPathXmlApplicationContext(
 			"spring-context.xml");
 
 	@Before
 	public void setUp() throws Exception {
+		Connection conn = DBUtils.getConnection(DB_DRIVER, DB_URL);
+		try {
+			ScriptRunner runner = new ScriptRunner(conn);
+			runner.setErrorLogWriter(null);
+			runner.setLogWriter(null);
+			Reader reader = Resources.getResourceAsReader("sample-data.sql");
+			runner.runScript(reader);
+		} finally {
+			if (conn != null)
+				conn.close();
+		}
 
-		Film film = new Film();
-		film.setIdFilm(100);
-		film.setFilename("filename-100");
-		film.setTitle("title-100");
-		film.setLocation("location-100");
-		film.setMd5("md5-100");
-
-		IFilmService service = (IFilmService) ctx.getBean("filmService");
-		service.addFilm(film);
 	}
 
 	@After
 	public void tearDown() throws Exception {
-
-		Film film = new Film();
-		film.setIdFilm(100);
-
-		IFilmService service = (IFilmService) ctx.getBean("filmService");
-		service.deleteFilm(film);
-
 	}
 
 	@Ignore
@@ -58,17 +62,17 @@ public class FilmServiceTest {
 		IFilmService service = (IFilmService) ctx.getBean("filmService");
 
 		Film film = new Film();
-		film.setIdFilm(100);
+		film.setIdFilm(1);
 		film = service.searchFilm(film);
 
 		if (film != null) {
-			assertTrue(film.getIdFilm() == 100);
-			assertTrue(film.getFilename().equalsIgnoreCase("filename-100"));
-			assertTrue(film.getLocation().equalsIgnoreCase("location-100"));
-			assertTrue(film.getTitle().equalsIgnoreCase("title-100"));
+			assertTrue(film.getIdFilm() == 1);
+			assertTrue(film.getFilename().equalsIgnoreCase("filename-1"));
+			assertTrue(film.getLocation().equalsIgnoreCase("location-1"));
+			assertTrue(film.getTitle().equalsIgnoreCase("title-1"));
 
 		} else {
-			fail("Film not found - IdFilm " + 100);
+			fail("Film not found - IdFilm " + 1);
 		}
 	}
 

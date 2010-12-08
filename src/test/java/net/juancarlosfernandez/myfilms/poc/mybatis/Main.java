@@ -14,7 +14,10 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class Main {
-
+	
+	private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+	private static final String DB_URL = "jdbc:derby:./target/DerbyDB/samplePelisDB;create=true";
+	
 	public static void main(String args[]) {
 
 		String resource = "ibatis-config.xml";
@@ -26,7 +29,7 @@ public class Main {
 			
 			try {
 				
-				sqlSession = sqlMapper.openSession(DBUtils.getConnection());
+				sqlSession = sqlMapper.openSession(DBUtils.getConnection(DB_DRIVER, DB_URL));
 				FilmMapper filmMapper = sqlSession.getMapper(FilmMapper.class);
 				
 				Film film = filmMapper.selectByPrimaryKey(1);

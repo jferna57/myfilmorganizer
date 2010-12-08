@@ -6,17 +6,16 @@ import java.sql.SQLException;
 
 public class DBUtils {
 	
-	private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-	private static final String DB_NAME= "./target/DerbyDB/pelisDB";
-	private static final String DB_URL = "jdbc:derby:" + DB_NAME + ";create=true";
+	public static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+	public static final String DB_URL= "jdbc:derby:./target/DerbyDB/pelisDB;create=true";
 	
-	public static Connection getConnection() throws SQLException {
+	public static Connection getConnection(String driver, String url) throws SQLException {
 		Connection conn = null;
 
 		try {
 			
-			Class.forName(DB_DRIVER);
-			conn = DriverManager.getConnection(DB_URL);
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url);
 			
 		} catch (java.lang.ClassNotFoundException e) {
 			e.printStackTrace();
