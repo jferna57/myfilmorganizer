@@ -6,6 +6,10 @@ public interface IFilmService {
 	
 	public abstract void addFilm(Film film);
 	
+	public abstract void addFilmFromLocation(String path);
+	
+	public abstract void addFilmFromLocations(String[] paths);
+	
 	public abstract void deleteFilm(Film film);
 	
 	public abstract Film searchFilm(Film film);

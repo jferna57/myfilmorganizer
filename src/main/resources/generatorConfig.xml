@@ -9,7 +9,7 @@
 
 	<context id="DerbyTables" targetRuntime="MyBatis3">
 		<jdbcConnection driverClass="org.apache.derby.jdbc.EmbeddedDriver"
-			connectionURL="jdbc:derby:./src/main/resources/DerbyDB/pelisDB"
+			connectionURL="jdbc:derby:./target/DerbyDB/pelisDB"
 			userId="" password="">
 		</jdbcConnection>
 
@@ -21,13 +21,13 @@
 		</javaModelGenerator>
 
 		<sqlMapGenerator
-			targetPackage="net.juancarlosfernandez.myfilms.persistence.xml"
+			targetPackage="."
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="net.juancarlosfernandez.myfilms.poc.persistence"
+			targetPackage="net.juancarlosfernandez.myfilms.mapper"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>

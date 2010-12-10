@@ -62,7 +62,7 @@ public class FilmServiceTest {
 		IFilmService service = (IFilmService) ctx.getBean("filmService");
 
 		Film film = new Film();
-		film.setIdFilm(1);
+		film.setIdFilm((long)1);
 		film = service.searchFilm(film);
 
 		if (film != null) {

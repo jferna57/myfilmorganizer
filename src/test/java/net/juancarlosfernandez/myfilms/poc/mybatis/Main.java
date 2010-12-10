@@ -32,7 +32,7 @@ public class Main {
 				sqlSession = sqlMapper.openSession(DBUtils.getConnection(DB_DRIVER, DB_URL));
 				FilmMapper filmMapper = sqlSession.getMapper(FilmMapper.class);
 				
-				Film film = filmMapper.selectByPrimaryKey(1);
+				Film film = filmMapper.selectByPrimaryKey((long)1);
 				
 				System.out.println("Id_Film " + film.getIdFilm());
 				
