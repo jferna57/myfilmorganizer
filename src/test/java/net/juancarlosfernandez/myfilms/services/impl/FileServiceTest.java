@@ -149,8 +149,8 @@ public class FileServiceTest {
 			long checksum = fileService.getChecksum(path, filename);
 			System.out.println("1---> " + checksum);
 			
-			checksum = fileService.getChecksum("/opt/virtual/HardDisks/", "windowsXP.vdi");
-			System.out.println("2---> " + checksum);
+			// checksum = fileService.getChecksum("/opt/virtual/HardDisks/", "windowsXP.vdi");
+			// System.out.println("2---> " + checksum);
 
 			// Delete tmp file
 			File file = new File(path + filename);
