@@ -5,6 +5,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class FilmAffinityPosterPluginTest {
@@ -30,7 +31,7 @@ public class FilmAffinityPosterPluginTest {
 		assertTrue(image.getUrl().equalsIgnoreCase("http://pics.filmaffinity.com/El_Padrino-485345341-large.jpg"));
 	}
 
-	@Test
+	@Ignore
 	public void testGetPosterUrlString() {
 		fail("Not yet implemented");
 	}
