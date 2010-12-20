@@ -22,8 +22,9 @@ public class FileService implements IFileService {
 	 * @param path
 	 *            Directory path
 	 * @return All the files of films
+	 * @throws IOException 
 	 */
-	public Film[] getFilms(String path) {
+	public Film[] getFilms(String path) throws IOException {
 
 		File dir = new File(path);
 		// String[] files = dir.list(FileFileFilter.FILE);
@@ -45,7 +46,7 @@ public class FileService implements IFileService {
 
 			for (int i = 0; i < files.length; i++) {
 				films[i] = new Film();
-				// films[i].setIdFilm(getChecksum(path, filename));
+				films[i].setIdFilm(getChecksum(path, films[i].getFilename()));
 				films[i].setFilename(files[i]);
 				films[i].setLocation(path);
 				films[i].setTitle(null);

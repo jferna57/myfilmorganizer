@@ -100,20 +100,17 @@ public class FileServiceTest {
 	}
 
 	@Test
-	public void testGetFilms() {
+	public void testGetFilms() throws IOException {
 		FileService filmSearch = new FileService();
 		Film[] films = filmSearch.getFilms(FILMS_TMP);
 
 		assertTrue(films.length == NUM_AVI_FILMS_TMP + NUM_MPEG_FILMS_TMP
 				+ SAMPLE_FILE_NAMES.length);
 
-		// for (int i = 0; i < films.length; i++)
-		// System.out.println(films[i]);
-
 	}
 
 	@Test
-	public void testNormalizeFilmName() {
+	public void testNormalizeFilmName() throws IOException {
 		FileService filmSearch = new FileService();
 		Film[] films = filmSearch.getFilms(FILMS_TMP);
 

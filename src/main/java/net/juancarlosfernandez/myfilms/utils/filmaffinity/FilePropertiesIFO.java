@@ -1,30 +1,6 @@
-/**
- * @(#)FilePropertiesIFO.java 1.0 06.06.05 (dd.mm.yy)
- *
- * Copyright (2003) Bro3
- * 
- * This program is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2, or any later version.
- * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License aloSng with 
- * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
- * Place, Boston, MA 02111.
- * 
- * Contact: bro3@users.sourceforge.net
- * -----------------------------------------------------
- * gaelead modifications :
- * - org.apache.log4j.Logger switched to java.util.logging.Logger
- * - Use only getRuntime (Video/Audio/Subs info will be scanned by mediainfo)
- * - removed all unused code
- * - fixed the way duration is computed (minutes and seconds interpretation was
- *   faulty)
- **/
-package net.sf.xmm.moviemanager.fileproperties;
+package net.juancarlosfernandez.myfilms.utils.filmaffinity;
+
+import net.juancarlosfernandez.myfilms.utils.filmaffinity.FileProperties;
 
 import java.io.RandomAccessFile;
 

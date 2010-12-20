@@ -1,5 +1,7 @@
 package net.juancarlosfernandez.myfilms.services.impl;
 
+import java.io.IOException;
+
 import net.juancarlosfernandez.myfilms.domain.Film;
 import net.juancarlosfernandez.myfilms.mapper.FilmMapper;
 import net.juancarlosfernandez.myfilms.services.IFilmService;
@@ -38,7 +40,7 @@ public class FilmService implements IFilmService {
 	}
 
 	@Override
-	public void addFilmFromLocation(String path) {
+	public void addFilmFromLocation(String path) throws IOException {
 
 		FileService fileService = new FileService();
 
@@ -51,8 +53,11 @@ public class FilmService implements IFilmService {
 	}
 
 	@Override
-	public void addFilmFromLocations(String[] paths) {
-		// TODO Auto-generated method stub
+	public void addFilmFromLocations(String[] paths) throws IOException {
+		
+		for (String path : paths) {
+			addFilmFromLocation(path);
+		}
 
 	}
 

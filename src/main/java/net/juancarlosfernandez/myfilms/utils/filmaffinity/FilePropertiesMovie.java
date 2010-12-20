@@ -1,37 +1,13 @@
-/**
- * @(#)FilePropertiesMovie.java 1.0 26.01.06 (dd.mm.yy)
- *
- * Copyright (2003) Mediterranean
- * 
- * This program is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2, or any later version.
- * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License along with 
- * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
- * Place, Boston, MA 02111.
- * 
- * Contact: mediterranean@users.sourceforge.net
- * -----------------------------------------------------
- * gaelead modifications :
- * - org.apache.log4j.Logger switched to java.util.logging.Logger
- * - restricted use of FilePropertiesIFO only
- * - won't use mediainfo here
- * - removed all unused code
- **/
-package net.sf.xmm.moviemanager.fileproperties;
+package net.juancarlosfernandez.myfilms.utils.filmaffinity;
+
+import net.juancarlosfernandez.myfilms.utils.filmaffinity.FileProperties;
+import net.juancarlosfernandez.myfilms.utils.filmaffinity.FilePropertiesIFO;
 
 import java.io.File;
 import java.io.RandomAccessFile;
 import java.util.logging.Logger;
 
-/**
- * @author Bro3@sf.net
- */
+
 public class FilePropertiesMovie {
 
     static Logger logger = Logger.getLogger("moviejukebox");
